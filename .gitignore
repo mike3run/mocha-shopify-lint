@@ -1,0 +1,8 @@
+node_modules
+.npm
+.node_rpl_history
+logs
+*.log
+npm-debug.log*
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
