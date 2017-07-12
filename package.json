@@ -6,20 +6,32 @@
   "repository": "git@github.com:mike3run/mocha-shopify-lint.git",
   "author": "Miguel Palau <mpalauzarza@gmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "compile": "babel -d dist/ src/",
+    "test": "mocha --require babel-register"
+  },
   "dependencies": {
     "@shopify/theme-lint": "^1.0.3",
     "chalk": "^2.0.1",
     "glob-all": "^3.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
     "mocha": "^3.4.2",
     "standard": "^10.0.2"
   },
   "standard": {
     "globals": [
       "describe",
-      "it"
+      "it",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "xdescribe",
+      "xit"
     ]
   }
 }
