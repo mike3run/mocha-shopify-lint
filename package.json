@@ -2,15 +2,24 @@
   "name": "mocha-shopify-lint",
   "version": "1.0.0",
   "description": "run theme-lint as mocha tests",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:mike3run/mocha-shopify-lint.git",
   "author": "Miguel Palau <mpalauzarza@gmail.com>",
   "license": "MIT",
+  "scripts": {},
   "dependencies": {
-    "@shopify/theme-lint": "^1.0.3"
+    "@shopify/theme-lint": "^1.0.3",
+    "chalk": "^2.0.1",
+    "glob-all": "^3.1.0"
   },
   "devDependencies": {
     "mocha": "^3.4.2",
     "standard": "^10.0.2"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
   }
 }
