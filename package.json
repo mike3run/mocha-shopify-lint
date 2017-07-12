@@ -1,0 +1,9 @@
+{
+  "name": "mocha-shopify-lint",
+  "version": "1.0.0",
+  "description": "run theme-lint as mocha tests",
+  "main": "index.js",
+  "repository": "git@github.com:mike3run/mocha-shopify-lint.git",
+  "author": "Miguel Palau <mpalauzarza@gmail.com>",
+  "license": "MIT"
+}
