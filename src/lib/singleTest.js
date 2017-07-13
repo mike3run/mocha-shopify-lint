@@ -1,4 +1,4 @@
-import { runAll } from 'theme-lint'
+import { runAll } from '@shopify/theme-lint'
 import chalk from 'chalk'
 
 /**
