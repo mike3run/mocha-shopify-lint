@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "compile": "babel -d dist/ src/",
-    "test": "mocha --require babel-register"
+    "test": "mocha test/*.js --require babel-register",
+    "preversion": "npm test",
+    "postversion": "git push; git push --tags"
   },
   "dependencies": {
     "@shopify/theme-lint": "^1.0.3",
