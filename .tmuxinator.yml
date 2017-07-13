@@ -1,6 +1,4 @@
-name: moka-markup
-root: ~/git/moka
+name: linter
+root: ~/git/mocha-shopify-lint
 windows:
-  - neovim: nvim
-  - gulp: yarn code
-  - parrot: tiny-care-terminal
+  - editor: eval $EDITOR
