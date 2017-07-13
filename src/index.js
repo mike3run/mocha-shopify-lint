@@ -1,5 +1,5 @@
 import globAll from 'glob-all'
-import { singleTest } from './lib'
+import singleTest from './lib/singleTest'
 
 /**
  * Runs theme-lint as mocha tests
