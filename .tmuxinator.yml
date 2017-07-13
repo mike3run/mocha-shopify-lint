@@ -1,0 +1,6 @@
+name: moka-markup
+root: ~/git/moka
+windows:
+  - neovim: nvim
+  - gulp: yarn code
+  - parrot: tiny-care-terminal
