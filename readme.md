@@ -1,3 +1,9 @@
+# ATTENTION
+
+Not really working because theme-lint is actually not really linting all the theme files as of right now, just the translation ones.
+
+😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢😢
+
 # mocha-shopify-lint
 
 Runs [theme-lint](https://github.com/Shopify/theme-lint) as [mocha](http://mochajs.org) tests.
