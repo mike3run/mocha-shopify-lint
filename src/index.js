@@ -1,16 +1,21 @@
-import globAll from 'glob-all'
-import singleTest from './lib/singleTest'
+import { runAll } from '@shopify/theme-lint'
+import chalk from 'chalk'
+import Reporter from './lib/reporter'
 
 /**
  * Runs theme-lint as mocha tests
  *
- * @param {Array} patterns - Globs are fine
- * @returns {Promise} the result of linting a file
+ * @param {String} path - Glob
  */
-const mochaShopifyLint = patterns => {
-  describe('theme-lint', function () {
-    globAll.sync(patterns)
-      .forEach(singleTest)
+const mochaShopifyLint = path => {
+  describe('theme-lint', () => {
+    it('Should pass', () => {
+      runAll(path, new Reporter())
+        .then(reporter => reporter.output())
+        .catch(err => {
+          throw new Error(chalk.red(err))
+        })
+    })
   })
 }
 

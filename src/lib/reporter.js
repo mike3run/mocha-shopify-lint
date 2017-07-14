@@ -1,5 +1,7 @@
-const gutil = require('gulp-util')
-const _ = require('lodash')
+import chalk from 'chalk'
+import _ from 'lodash'
+
+const log = console.log
 
 /** Class representing a custom reporter for @shopify/theme-lint */
 export default class Reporter {
@@ -36,21 +38,21 @@ export default class Reporter {
     const testsRun = this.failures.length + this.successes.length
 
     if (this.failures.length === 0) {
-      gutil.log('Translation tests complete:',
-        gutil.colors.green(`Success (${testsRun} checks run)`)
+      log('Translation tests complete:',
+        chalk.green(`Success (${testsRun} checks run)`)
       )
     } else {
-      gutil.log('Translation tests complete:',
-        gutil.colors.red(`Failed (${testsRun} checks run)`)
+      log('Translation tests complete:',
+        chalk.red(`Failed (${testsRun} checks run)`)
       )
 
       const failureGroups = _.groupBy(this.failures, (failure) => failure[1])
 
       _.forOwn(failureGroups, (failures, file) => {
-        gutil.log(gutil.colors.red(`${file}:`))
+        log(chalk.red(`${file}:`))
 
         failures.map((failure) => {
-          return gutil.log(failure[0])
+          return log(failure[0])
         })
       })
 
